@@ -1,0 +1,77 @@
+Author: Danny Lillard
+Date: 5/21/2021
+Description: Notes from the knowledge given in: https://www.youtube.com/watch?v=HXV3zeQKqGY, 
+             for information on queries look at the file: queries.sql
+
+Notes:
+
+What is a database?
+    Any collection of related information.
+        Phonebook, shopping list, A company's client base
+
+DBMS (We use MySQL):
+    Software that helps users create and maintain a database.
+    Security, backups, importing/exporting, concurrency, works with software.
+
+C.R.U.D:
+    Create Read, Update, Delete.
+    The 4 main things that we do with a database.
+
+2 Types of Databases:
+    Relational (SQL):
+        Organizes data into one or more tables.
+            Each table has columns and rows.
+            A unique key identifies each row.
+            Mostly standardized.
+    Non-Relational (NoSQL):
+        Organizes data in any other way but a traditional table.
+            Key-value
+            Documents
+            Graphs
+
+Primary Key:
+    Unique element that defines a row.
+    Surrogate Key: No mapping to the real world.
+    Natural Key: Has mapping to the real world, SSN.
+
+Foreign Key:
+    Links us to another table.
+
+See file: creation.sql, for table creation.
+See file load.sql for table loading, this video does NOT cover loading in a csv file,
+need to create an example of that.
+
+See file: queries.sql for notes over:
+    basic queries, wildcards(new!), union, joins, nested queries, on delete,
+    and triggers(new!). 
+
+ER Diagrams:
+    Entity: 
+        A object we want to model & store info about.
+            e.g. student
+    Attributes:
+        Specific pieces of information about an Entity.
+            e.g. name, grade, gpa, primary key
+        Composite Attributes: Having multiple attributes.
+            e.g. fname lname == name
+        Multi-valued Attributes: An attribute that can have more than one value.
+            e.g. clubs, a student is in multiple clubs.
+        Derived Attributes: An attribute that can be derived from others, not stored.
+            e.g. has honors
+
+    Relationship Entity:
+        Verb that links two entities.
+    Total participation:
+        All members must participate must participate in the relationship.
+            e.g. student is in a school.
+    Relationship Cardinality:
+        1:1
+        1:N
+        M:N relations.
+    Weak Entity:
+        An entity that cannot be uniquely described by its attributes alone.
+            e.g. An exam
+    Identifying Relationship:
+        A relationship that serves to uniquely identify the weak entity.
+            e.g. has
+    
